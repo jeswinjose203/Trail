@@ -10,7 +10,7 @@
 
     app.use('/css',express.static(path.join(__dirname,'node_modules/bootstrap/dist/css')));
     app.use('/js',express.static(path.join(__dirname,'node_modules/bootstrap/dist/js')));
-
+    app.use(express.static(__dirname+'/photos'));
   app.get('/', function(req, res) {
     fs.readFile("front.html", function (error, pgResp){
         
