@@ -6,8 +6,11 @@
     var fs = require('fs');
     const PORT = process.env.PORT || 3020;
     app.use(express.urlencoded({ extended: true }));
+    
+
     app.use('/css',express.static(path.join(__dirname,'node_modules/bootstrap/dist/css')));
     app.use('/js',express.static(path.join(__dirname,'node_modules/bootstrap/dist/js')));
+
   app.get('/', function(req, res) {
     fs.readFile("front.html", function (error, pgResp){
         
